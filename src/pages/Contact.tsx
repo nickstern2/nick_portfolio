@@ -21,10 +21,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Stack
-      // sx={{ minHeight: "100vh", height: "100%" }}
-      alignItems='center'
-      padding={4}>
+    <Stack alignItems='center' padding={4}>
       <Box
         display='flex'
         flexDirection='column'
