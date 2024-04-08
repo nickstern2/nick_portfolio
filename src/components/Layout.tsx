@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { Footer } from "./Footer";
 import NavBar from "./Navbar";
 import { useLocation } from "react-router-dom";
-import { RouteNames } from "../resuable/enum-list";
+import { RouteNames } from "../reusable/enum-list";
 
 interface LayoutProps {
   children: ReactNode;

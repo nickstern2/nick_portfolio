@@ -7,7 +7,7 @@ import ContactForm from "./pages/Contact";
 import { Stack } from "@mui/material";
 import Layout from "./components/Layout";
 import Resume from "./pages/Resume";
-import { RouteNames } from "./resuable/enum-list";
+import { RouteNames } from "./reusable/enum-list";
 // import { Resume } from "./pages/Resume";
 
 const App = () => {
