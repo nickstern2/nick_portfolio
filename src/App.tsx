@@ -7,6 +7,7 @@ import ContactForm from "./pages/Contact";
 import { Stack } from "@mui/material";
 import Layout from "./components/Layout";
 import Resume from "./pages/Resume";
+import { RouteNames } from "./resuable/enum-list";
 // import { Resume } from "./pages/Resume";
 
 const App = () => {
@@ -15,12 +16,12 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path='/home' element={<Home />} />
-            <Route path='/testimonials' element={<Testimonials />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/resume' element={<Resume />} />
-            <Route path='/contact' element={<ContactForm />} />
-            <Route path='/' element={<Home />} />{" "}
+            <Route path={RouteNames.Home} element={<Home />} />
+            <Route path={RouteNames.Testimonials} element={<Testimonials />} />
+            <Route path={RouteNames.Projects} element={<Projects />} />
+            <Route path={RouteNames.Resume} element={<Resume />} />
+            <Route path={RouteNames.Contact} element={<ContactForm />} />
+            <Route path={RouteNames.Home} element={<Home />} />
             {/* This will redirect to Home for the base path */}
           </Routes>
         </Layout>
