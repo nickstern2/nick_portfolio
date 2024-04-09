@@ -16,21 +16,27 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<IFormInput>();
 
+  // TODO: Implement
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     // Implementation remains the same
   };
 
   return (
-    <Stack alignItems='center' padding={4}>
+    <Stack
+      alignItems='center'
+      padding={4}
+      // TODO: hack for now
+      // minHeight='100vh'
+    >
       <Box
         display='flex'
         flexDirection='column'
         alignItems='center'
         paddingBottom={2}>
-        <Typography variant='h4' component='h1' gutterBottom>
+        <Typography variant='h2' component='h1' gutterBottom>
           Contact
         </Typography>
-        <Typography variant='body1'>Want to hire me?</Typography>
+        <Typography variant='h3'>Want to hire me?</Typography>
       </Box>
       <Box
         component='form'
@@ -40,7 +46,6 @@ const ContactForm: React.FC = () => {
           padding: "20px",
           borderRadius: "8px",
           maxWidth: "400px",
-          // margin: "auto",
           color: "white",
           "& .MuiTextField-root": {
             marginBottom: "20px",

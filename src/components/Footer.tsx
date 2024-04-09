@@ -2,18 +2,22 @@ import React from "react";
 import { Box, Typography, Link, Stack } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { paletteNavBar } from "../reusable/Theme";
 
 export const Footer: React.FC = () => {
   return (
     <Box
       sx={{
-        bgcolor: "primary.dark",
+        bgcolor: paletteNavBar.main,
+        // TODO: Adjust color
         color: "white",
         py: 3,
         px: 2,
         mt: "auto",
-        position: "sticky",
+        position: "fixed",
         bottom: 0,
+        right: 0,
+        left: 0,
       }}>
       <Typography variant='body1' sx={{ textAlign: "center", mb: 2 }}>
         Connect with me on social media
