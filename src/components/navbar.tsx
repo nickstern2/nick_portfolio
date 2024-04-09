@@ -11,10 +11,11 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { paletteNavBar } from "../reusable/Theme";
 
 const pages = [
+  { title: "Home", path: "/" },
   { title: "Projects", path: "/projects" },
-  { title: "Testimonials", path: "/testimonials" },
   { title: "Resume", path: "/resume" },
   { title: "Contact", path: "/contact" },
 ];
@@ -33,10 +34,17 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position='sticky' sx={{ top: 0 }}>
+    <AppBar
+      position='sticky'
+      // TODO: Prevent stuff from showing udnerneath
+      sx={{ top: 0, background: paletteNavBar.main }}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Box
+            component='img'
+            src='/nick_stern_site_logo.png'
+            sx={{ height: "50px" }}
+          />
           <Typography
             variant='h6'
             noWrap
@@ -50,9 +58,7 @@ const NavBar = () => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-            }}>
-            LOGO
-          </Typography>
+            }}></Typography>
 
           {/* Mobile view */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
