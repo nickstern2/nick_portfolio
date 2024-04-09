@@ -16,7 +16,7 @@ const Resume = () => {
   }
 
   return (
-    <Stack alignItems='center'>
+    <Stack alignItems='center' margin={4}>
       <Document
         file={`${process.env.PUBLIC_URL}/Nicholas_Stern_Resume_pdf.pdf`}
         onLoadSuccess={onDocumentLoadSuccess}>
