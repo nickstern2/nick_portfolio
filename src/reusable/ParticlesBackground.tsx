@@ -1,7 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-export const ParticlesBackground = () => {
+import { paletteNavBar, theme } from "./Theme";
+
+export const ParticlesBackground: FC = () => {
   // TODO: Delete if not used
   const [init, setInit] = React.useState(false);
 
@@ -29,7 +31,14 @@ export const ParticlesBackground = () => {
           autoPlay: true,
           background: {
             color: {
-              value: "#0d47a1",
+              value: paletteNavBar.main,
+              // value: theme.palette.primary.dark,
+              // value: "#D0E2FF", //really light blue
+              // value: "#AFDBD2", //Greenish(I also like)
+              // value: "#513e23", //Orange(I like it)
+              // value: "#333333", //grey(I like it)
+              // value: "#0d47a1",
+              // value: "#FAFAFA", //off white
             },
             opacity: 1,
           },
@@ -37,6 +46,7 @@ export const ParticlesBackground = () => {
             composite: "destination-out",
             cover: {
               color: {
+                // value: "black",
                 value: "#fff",
               },
               opacity: 1,
@@ -90,9 +100,11 @@ export const ParticlesBackground = () => {
               },
             },
             color: {
-              value: "#ff0000",
+              value: "#53D3D5", //neon green
+              // value: "#ff0000",//red
               animation: {
                 enable: true,
+                // color change speed
                 speed: 20,
                 sync: true,
               },
@@ -104,13 +116,15 @@ export const ParticlesBackground = () => {
               value: { min: 0.1, max: 0.5 },
             },
             size: {
-              value: { min: 0.1, max: 5 },
+              value: { min: 2, max: 5 },
             },
             links: {
               enable: true,
               distance: 150,
+              // color:'rgba(10, 25, 47, 1)',
               color: "#ffffff",
-              opacity: 0.4,
+              // color: "#ffffff",
+              opacity: 0.6,
               width: 1,
             },
             move: {
