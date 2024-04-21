@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nick_portfolio/static/css/main.ad05f76b.css",
-    "main.js": "/nick_portfolio/static/js/main.60e53833.js",
+    "main.js": "/nick_portfolio/static/js/main.417b8d56.js",
     "static/js/1927.b7ef4eea.chunk.js": "/nick_portfolio/static/js/1927.b7ef4eea.chunk.js",
     "static/js/7590.d1de99be.chunk.js": "/nick_portfolio/static/js/7590.d1de99be.chunk.js",
     "static/js/6725.80130ff9.chunk.js": "/nick_portfolio/static/js/6725.80130ff9.chunk.js",
@@ -70,9 +70,17 @@
     "static/js/4265.18f57bd4.chunk.js": "/nick_portfolio/static/js/4265.18f57bd4.chunk.js",
     "static/js/4494.63f73c50.chunk.js": "/nick_portfolio/static/js/4494.63f73c50.chunk.js",
     "static/js/4290.73d1425e.chunk.js": "/nick_portfolio/static/js/4290.73d1425e.chunk.js",
+    "static/media/nick_stern_site_logo.png": "/nick_portfolio/static/media/nick_stern_site_logo.38a1ac079ab9e332c0b6.png",
+    "static/media/Ruby.png": "/nick_portfolio/static/media/Ruby.d2625a43803d588bd8c6.png",
+    "static/media/HTML5.png": "/nick_portfolio/static/media/HTML5.2cd5d05c9660ec55992e.png",
+    "static/media/MongoDB.png": "/nick_portfolio/static/media/MongoDB.b723bb18907da666f951.png",
+    "static/media/MaterialUI.png": "/nick_portfolio/static/media/MaterialUI.530e2f6eb2e3f49b9008.png",
+    "static/media/PostgresSQL.png": "/nick_portfolio/static/media/PostgresSQL.17c2814e17fd9d441e1f.png",
+    "static/media/React.png": "/nick_portfolio/static/media/React.98ff38735baa4c1b0381.png",
+    "static/media/NETcore.png": "/nick_portfolio/static/media/NETcore.d057a6b73aeb081bb728.png",
     "index.html": "/nick_portfolio/index.html",
     "main.ad05f76b.css.map": "/nick_portfolio/static/css/main.ad05f76b.css.map",
-    "main.60e53833.js.map": "/nick_portfolio/static/js/main.60e53833.js.map",
+    "main.417b8d56.js.map": "/nick_portfolio/static/js/main.417b8d56.js.map",
     "1927.b7ef4eea.chunk.js.map": "/nick_portfolio/static/js/1927.b7ef4eea.chunk.js.map",
     "7590.d1de99be.chunk.js.map": "/nick_portfolio/static/js/7590.d1de99be.chunk.js.map",
     "6725.80130ff9.chunk.js.map": "/nick_portfolio/static/js/6725.80130ff9.chunk.js.map",
@@ -144,6 +152,6 @@
   },
   "entrypoints": [
     "static/css/main.ad05f76b.css",
-    "static/js/main.60e53833.js"
+    "static/js/main.417b8d56.js"
   ]
 }
