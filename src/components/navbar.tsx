@@ -11,8 +11,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { paletteNavBar } from "../reusable/Theme";
+import { paletteNavBar, theme } from "../reusable/Theme";
 import SiteLogo from "../assets/nick_stern_site_logo.png";
+import { useGetIsMobile } from "../hooks/useIsMobile";
 const pages = [
   { title: "Home", path: "/" },
   { title: "Projects", path: "/projects" },
@@ -22,6 +23,8 @@ const pages = [
 ];
 
 const NavBar = () => {
+  const { isMobile } = useGetIsMobile();
+  console.log("!!navbar");
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -84,6 +87,11 @@ const NavBar = () => {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
+                // TODO: apply to only mobile
+                "& .MuiPaper-root": {
+                  // This targets the inner Paper component of the Menu
+                  backgroundColor: theme.palette.primary.dark,
+                },
               }}>
               {pages.map((page) => (
                 <MenuItem key={page.title} onClick={handleCloseNavMenu}>
@@ -91,7 +99,12 @@ const NavBar = () => {
                     textAlign='center'
                     component={Link}
                     to={page.path}
-                    style={{ textDecoration: "none", color: "inherit" }}>
+                    style={{
+                      textDecoration: "none",
+                      color: theme.palette.text.primary,
+                      fontSize: theme.spacing(2),
+                      fontWeight: 600,
+                    }}>
                     {page.title}
                   </Typography>
                 </MenuItem>
@@ -104,8 +117,8 @@ const NavBar = () => {
             {pages.map((page) => (
               <Button
                 key={page.title}
-                component={Link} // Use Link here
-                to={page.path} // Adjust as needed
+                component={Link}
+                to={page.path}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}>
                 {page.title}
