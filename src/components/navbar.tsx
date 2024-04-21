@@ -17,7 +17,8 @@ const pages = [
   { title: "Home", path: "/" },
   { title: "Projects", path: "/projects" },
   { title: "Resume", path: "/resume" },
-  { title: "Contact", path: "/contact" },
+  // TODO: Add back when completed
+  // { title: "Contact", path: "/contact" },
 ];
 
 const NavBar = () => {
