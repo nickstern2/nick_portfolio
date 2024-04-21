@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
 import { Box } from "@mui/material";
 import { Footer } from "./Footer";
-import NavBar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import { RouteNames } from "../reusable/consts";
 import { ParticlesBackground } from "../reusable/ParticlesBackground"; // Import the ParticlesBackground component
 import { InteractiveBackground } from "../reusable/InteractiveBackground";
 import { theme } from "../reusable/Theme";
+import NavBar from "./navbar";
 
 interface LayoutProps {
   children: ReactNode;
