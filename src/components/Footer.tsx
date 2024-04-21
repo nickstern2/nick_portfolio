@@ -2,9 +2,11 @@ import React from "react";
 import { Box, Typography, Link, Stack } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
 import { paletteNavBar } from "../reusable/Theme";
 
 export const Footer: React.FC = () => {
+  const emailAddress = "nickstern2@gmail.com";
   return (
     <Box
       sx={{
@@ -34,6 +36,9 @@ export const Footer: React.FC = () => {
           target='_blank'
           color='inherit'>
           <GitHubIcon fontSize='large' />
+        </Link>
+        <Link href={`mailto:${emailAddress}`} color='inherit'>
+          <EmailIcon fontSize='large' />
         </Link>
       </Stack>
     </Box>
