@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { paletteNavBar } from "../reusable/Theme";
-
+import SiteLogo from "../assets/nick_stern_site_logo.png";
 const pages = [
   { title: "Home", path: "/" },
   { title: "Projects", path: "/projects" },
@@ -41,11 +41,7 @@ const NavBar = () => {
       sx={{ top: 0, background: paletteNavBar.main }}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <Box
-            component='img'
-            src='/nick_stern_site_logo.png'
-            sx={{ height: "50px" }}
-          />
+          <Box component='img' src={SiteLogo} sx={{ height: "50px" }} />
           <Typography
             variant='h6'
             noWrap
