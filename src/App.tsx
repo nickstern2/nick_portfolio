@@ -22,7 +22,7 @@ const App = () => {
                 <Route path={RouteNames.Home} element={<Home />} />
                 <Route path={RouteNames.Projects} element={<ProjectList />} />
                 <Route path={RouteNames.Resume} element={<Resume />} />
-                <Route path={RouteNames.Contact} element={<ContactForm />} />
+                {/* <Route path={RouteNames.Contact} element={<ContactForm />} /> */}
                 <Route path={RouteNames.Home} element={<Home />} />
                 {/* This will redirect to Home for the base path */}
               </Routes>
