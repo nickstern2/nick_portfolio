@@ -1,7 +1,15 @@
-import { Box, Stack, Typography, Tooltip } from "@mui/material";
+import {
+  Box,
+  Container,
+  Stack,
+  Typography,
+  Tooltip,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import { TechStack } from "../reusable/consts";
 import CSharpIcon from "../assets/CSharp.png";
-import ReactIconIcon from "../assets/React.png";
+import ReactIcon from "../assets/React.png";
 import JavaScriptIcon from "../assets/JavaScript.png";
 import TypeScriptIcon from "../assets/TypeScript.png";
 import GraphQLIcon from "../assets/GraphQL.png";
@@ -13,84 +21,81 @@ import RubyIcon from "../assets/Ruby.png";
 import RubyonRailsIcon from "../assets/RubyonRails.png";
 import PostgresSQLIcon from "../assets/PostgresSQL.png";
 import MongoDBIcon from "../assets/MongoDB.png";
+import { Theme } from "@mui/material/styles/createTheme";
 
-const IconStyles = {
+const IconStyles = (theme: Theme) => ({
+  width: "auto",
   height: "50px",
   transition: "transform 0.2s",
-  ":hover": { transform: "scale(1.2)" },
-};
+  ":hover": {
+    transform: "scale(1.2)",
+  },
+  [theme.breakpoints.down("md")]: {
+    height: "40px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    height: "30px",
+  },
+});
 
 export const Home = () => {
+  const theme = useTheme();
+  // TODO: update with hook
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <Box
-      // TODO: adjust height to allow for footer links to work
-      style={{
-        position: "absolute",
-        top: 120,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 2,
-      }}>
-      <Typography variant='h1' align='center' gutterBottom>
+    <Container
+      maxWidth='lg'
+      style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+      <Typography
+        variant='h2'
+        align='center'
+        gutterBottom
+        // TODO: only necessary on mobile?
+        sx={{ zIndex: 999, position: "relative" }}>
         My Tech Stack
       </Typography>
       <Stack spacing={2}>
         <Stack
           direction='row'
-          padding={3}
-          spacing={3}
+          flexWrap='wrap'
           justifyContent='center'
-          zIndex={999}>
-          <Tooltip title={TechStack.React} arrow>
-            <Box component='img' src={ReactIconIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.JavaScript} arrow>
-            <Box component='img' src={JavaScriptIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.TypeScript} arrow>
-            <Box component='img' src={TypeScriptIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.GraphQL} arrow>
-            <Box component='img' src={GraphQLIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.HTML} arrow>
-            <Box component='img' src={HTML5Icon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.CSS3} arrow>
-            <Box component='img' src={CSS3Icon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.MaterialUI} arrow>
-            <Box component='img' src={MaterialUIIcon} sx={IconStyles} />
-          </Tooltip>
+          zIndex={999}
+          spacing={isMobile ? 1 : 2}>
+          {[
+            { icon: ReactIcon, label: TechStack.React },
+            { icon: JavaScriptIcon, label: TechStack.JavaScript },
+            { icon: TypeScriptIcon, label: TechStack.TypeScript },
+            { icon: GraphQLIcon, label: TechStack.GraphQL },
+            { icon: HTML5Icon, label: TechStack.HTML },
+            { icon: CSS3Icon, label: TechStack.CSS3 },
+            { icon: MaterialUIIcon, label: TechStack.MaterialUI },
+          ].map((item) => (
+            <Tooltip title={item.label} arrow key={item.label}>
+              <Box component='img' src={item.icon} sx={IconStyles(theme)} />
+            </Tooltip>
+          ))}
         </Stack>
         <Stack
           direction='row'
-          padding={3}
-          spacing={3}
+          flexWrap='wrap'
           justifyContent='center'
-          zIndex={999}>
-          {/* <Box component='img' src='/CSharp.png' sx={IconStyles} /> */}
-          <Tooltip title={TechStack.CSharp} arrow>
-            <Box component='img' src={CSharpIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.NETCore} arrow>
-            <Box component='img' src={NETcoreIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.Ruby} arrow>
-            <Box component='img' src={RubyIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.RubyOnRails} arrow>
-            <Box component='img' src={RubyonRailsIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.PostgresSQL} arrow>
-            <Box component='img' src={PostgresSQLIcon} sx={IconStyles} />
-          </Tooltip>
-          <Tooltip title={TechStack.MongoDB} arrow>
-            <Box component='img' src={MongoDBIcon} sx={IconStyles} />
-          </Tooltip>
+          zIndex={999}
+          spacing={isMobile ? 1 : 2}>
+          {[
+            { icon: CSharpIcon, label: TechStack.CSharp },
+            { icon: NETcoreIcon, label: TechStack.NETCore },
+            { icon: RubyIcon, label: TechStack.Ruby },
+            { icon: RubyonRailsIcon, label: TechStack.RubyOnRails },
+            { icon: PostgresSQLIcon, label: TechStack.PostgresSQL },
+            { icon: MongoDBIcon, label: TechStack.MongoDB },
+          ].map((item) => (
+            <Tooltip title={item.label} arrow key={item.label}>
+              <Box component='img' src={item.icon} sx={IconStyles(theme)} />
+            </Tooltip>
+          ))}
         </Stack>
       </Stack>
-    </Box>
+    </Container>
   );
 };

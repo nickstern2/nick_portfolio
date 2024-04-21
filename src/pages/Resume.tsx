@@ -25,7 +25,7 @@ const Resume = () => {
         {Array.from(new Array(numPages), (el, index) => (
           <Page
             key={`page_${index + 1}`}
-            scale={isMobile ? 0.82 : 1.25}
+            scale={isMobile ? 0.75 : 1.25}
             pageNumber={index + 1}
           />
         ))}
