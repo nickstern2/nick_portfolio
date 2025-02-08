@@ -16,7 +16,7 @@ const App = () => {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Stack>
-          <BrowserRouter>
+          <BrowserRouter basename='/nick_portfolio'>
             <Layout>
               <Routes>
                 <Route path={RouteNames.Home} element={<Home />} />
