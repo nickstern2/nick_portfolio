@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,12 +10,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { paletteNavBar, theme } from "../reusable/Theme";
 import SiteLogo from "../assets/nick_stern_site_logo.png";
 import { useGetIsMobile } from "../hooks/useIsMobile";
+// TODO: Update with const route names
 const pages = [
-  { title: "Home", path: "/" },
+  { title: "Home", path: "/nick_portfolio" },
   { title: "Projects", path: "/projects" },
   { title: "Resume", path: "/resume" },
   // TODO: Add back when completed
@@ -24,7 +24,6 @@ const pages = [
 
 const NavBar = () => {
   const { isMobile } = useGetIsMobile();
-  console.log("!!navbar");
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -48,8 +47,8 @@ const NavBar = () => {
           <Typography
             variant='h6'
             noWrap
-            component={Link} // Use Link here
-            to='/' // Adjust as needed
+            component={Link}
+            to='/' // TODO: fix this
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
