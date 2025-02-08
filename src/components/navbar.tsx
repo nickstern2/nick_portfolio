@@ -15,8 +15,7 @@ import SiteLogo from "../assets/nick_stern_site_logo.png";
 import { useGetIsMobile } from "../hooks/useIsMobile";
 // TODO: Update with const route names
 const pages = [
-  // { title: "Home", path: "/nick_portfolio" },
-  { title: "Home", path: "/" },
+  { title: "Home", path: "" },
   { title: "Projects", path: "/projects" },
   { title: "Resume", path: "/resume" },
   // TODO: Add back when completed
@@ -49,7 +48,7 @@ const NavBar = () => {
             variant='h6'
             noWrap
             component={Link}
-            to='/nick_portfolio' // TODO: fix this
+            to='/' // TODO: fix this
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
