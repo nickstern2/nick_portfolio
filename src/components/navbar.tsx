@@ -15,7 +15,7 @@ import SiteLogo from "../assets/nick_stern_site_logo.png";
 import { useGetIsMobile } from "../hooks/useIsMobile";
 // TODO: Update with const route names
 const pages = [
-  { title: "Home", path: "" },
+  { title: "Home", path: "/" },
   { title: "Projects", path: "/projects" },
   { title: "Resume", path: "/resume" },
   // TODO: Add back when completed

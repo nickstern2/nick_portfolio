@@ -16,7 +16,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
 
   // Assuming you define RouteNames.Home or use a condition to identify the Home page
-  const isHomePage = location.pathname === RouteNames.Home;
+  const isHomePage =
+    location.pathname === RouteNames.Home ||
+    location.pathname === RouteNames.BaseName;
+  console.log("!isHomePage", isHomePage, location.pathname);
   // Determines if footer will display
   const shouldHideFooter =
     location.pathname === RouteNames.Resume ||

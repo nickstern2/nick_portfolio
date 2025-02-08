@@ -1,5 +1,6 @@
 export enum RouteNames {
-  Home = "",
+  BaseName = "/nick_portfolio",
+  Home = "/",
   Testimonials = "/testimonials",
   Projects = "/projects",
   Resume = "/resume",
